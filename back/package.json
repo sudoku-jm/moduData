@@ -1,0 +1,27 @@
+{
+  "name": "backend-setting",
+  "version": "1.0.0",
+  "description": "백엔드 셋팅",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  
+  "author": "jm",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.1.0",
+    "express": "^4.21.2",
+    "express-session": "^1.17.1",
+    "mysql2": "^3.14.3",
+    "sequelize": "^6.37.5",
+    "sequelize-cli": "^6.6.2",
+    "shapefile": "^0.6.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
