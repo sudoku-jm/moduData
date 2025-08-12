@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import Papa from "papaparse";
 import {
     Box,
     Container,
@@ -194,7 +193,7 @@ const Market = () => {
         let guOptions = [];
         const getSessionStorageGu = sessionStorage.getItem("seoulGuList");
         if (!getSessionStorageGu) {
-            await fetch("http://localhost:5500/local/gu")
+            await fetch("http://172.30.40.34:5500/local/gu")
                 .then((r) => r.json())
                 .then((json) => {
                     const code = json.status.code;
@@ -252,7 +251,7 @@ const Market = () => {
         setSelectedGu(opt);
 
         // 자치구 하위 데이터 조회
-        await fetch(`http://localhost:5500/local/dong?gu=${opt.value}`)
+        await fetch(`http://172.30.40.34:5500/local/dong?gu=${opt.value}`)
             .then((r) => r.json())
             .then((json) => {
                 const code = json.status.code;
@@ -291,7 +290,7 @@ const Market = () => {
 
             //서비스업종 불러오기
             await fetch(
-                `http://localhost:5500/local/service_code?s=${selectedQuarter}&town_code=${opt.value}`
+                `http://172.30.40.34:5500/local/service_code?s=${selectedQuarter}&town_code=${opt.value}`
             )
                 .then((r) => r.json())
                 .then((json) => {
@@ -325,7 +324,7 @@ const Market = () => {
             //차트 및 리스트용 컬럼명 들고오기.
             const getSessionStorageCol = sessionStorage.getItem("columnList");
             if (!getSessionStorageCol) {
-                await fetch(`http://localhost:5500/quarter-sale/columns`)
+                await fetch(`http://172.30.40.34:5500/quarter-sale/columns`)
                     .then((r) => r.json())
                     .then((json) => {
                         // console.log(json);
@@ -473,7 +472,7 @@ const Market = () => {
 
         console.log("queryString", queryString);
 
-        await fetch(`http://localhost:5500/quarter-sale/list?${queryString}`)
+        await fetch(`http://172.30.40.34:5500/quarter-sale/list?${queryString}`)
             .then((r) => r.json())
             .then((json) => {
                 console.log(json);

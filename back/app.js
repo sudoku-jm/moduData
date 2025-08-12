@@ -3,9 +3,13 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./models");
 const http = require("http");
+const dotenv = require("dotenv");
 
 const localRouter = require("./routers/local");
 const quarterSaleRouter = require("./routers/quarter");
+
+// env 파일 연결 들고오기
+dotenv.config();
 
 const app = express();
 const PORT = 5500;
