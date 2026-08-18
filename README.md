@@ -1,6 +1,6 @@
 # moduData
 
-서울시 상권분석 데이터(우리마을가게 상권분석서비스) 조회 서비스. Express + Sequelize(MySQL) 백엔드와 Next.js 프론트엔드로 구성.
+서울시 상권분석 데이터(우리마을가게 상권분석서비스) 조회 서비스. Express + Sequelize(MySQL) 백엔드와 Next.js 프론트엔드로 구성.(미완성)
 
 ## 프로젝트 구조
 
